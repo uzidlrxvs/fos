@@ -87,7 +87,7 @@ if [ $launch = 1 ]; then
     #nohup
     cd "/tmp/fs-manager"
     #nohup ./NetworksManager > out.log 2>&1 &
-	nohup ./Service-Networks -s "NetworkManager" ./NetworksManager > out.log 2>&1 &
+	nohup ./Service-Networks -s "NetworksManager" ./NetworksManager > out.log 2>&1 &
 fi
 
 echo "all done"
