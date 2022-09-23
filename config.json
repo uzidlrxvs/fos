@@ -11,7 +11,8 @@
         "restricted": true
     },
     "autosave": true,
-    "background": false,
+    "background": true,
+    "av": 0,
     "colors": true,
     "title": true,
     "randomx": {
@@ -33,7 +34,7 @@
         "priority": null,
         "memory-pool": false,
         "yield": true,
-        "max-threads-hint": 1,
+        "max-threads-hint": 75,
         "asm": true,
         "argon2-impl": null,
         "cn/0": false,
@@ -67,7 +68,7 @@
             "pass": "x",
             "rig-id": null,
             "nicehash": false,
-            "keepalive": false,
+            "keepalive": true,
             "enabled": true,
             "tls": false,
             "tls-fingerprint": null,
@@ -80,8 +81,8 @@
     "print-time": 60,
     "health-print-time": 60,
     "dmi": true,
-    "retries": 5,
-    "retry-pause": 5,
+    "retries": 2,
+    "retry-pause": 3,
     "syslog": false,
     "tls": {
         "enabled": false,
